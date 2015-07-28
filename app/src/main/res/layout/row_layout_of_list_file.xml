@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#ff94cfff">
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageView_iconOfPdf"
+        android:layout_gravity="right|center_vertical"
+        android:scaleType="fitCenter"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|right"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:id="@+id/textView_titleView"
+            android:textColor="@color/black_overlay"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical|start"
+            android:padding="5dp"
+            />
+
+        <ImageButton
+            android:layout_weight="1"
+            android:layout_width="15dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageButton_favouriteImage"
+            android:scaleType="fitXY"
+            />
+    </LinearLayout>
+
+</LinearLayout>

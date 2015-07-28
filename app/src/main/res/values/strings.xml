@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pdf Reader</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="button_sort_by_name">Name</string>
+    <string name="button_sort_by_last_viewed">Last Viewed</string>
+</resources>

@@ -1,0 +1,147 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#ffd2d4d7"
+             tools:context=".FullscreenActivity"
+             android:id="@+id/MainView">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fullscreen_content"
+        android:clickable="true"
+        android:longClickable="true">
+
+        <fragment
+            class="hhp.pdfreader.ListOfFileFragment"
+            android:id="@+id/listOfNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/fullscreen_content_controls"
+                  style="?metaButtonBarStyle"
+                  android:layout_width="match_parent"
+                  android:layout_height="38dp"
+                  android:layout_gravity="center_horizontal|top"
+                  android:background="@color/button_material_dark"
+                  android:orientation="horizontal"
+                  tools:ignore="UselessParent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_control_panel"
+            android:src="@drawable/control_panel"
+            android:layout_weight="5"
+            android:scaleType="fitCenter"/>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_edit"
+                android:src="@drawable/edit"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_sort"
+                android:src="@drawable/sort"
+                android:scaleType="fitCenter"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:id="@+id/fullscreen_edit_control"
+        android:background="@color/primary_dark_material_light">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imageButton_select"
+            android:src="@drawable/select"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_rename"
+            android:src="@drawable/rename"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_move"
+            android:src="@drawable/move"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_delete"
+            android:src="@drawable/delete"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|right"
+        android:id="@+id/fullscreen_sort_control"
+        android:background="@color/primary_dark_material_light">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_sort_by_name"
+            android:text="@string/button_sort_by_name"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button_sort_by_last_viewed"
+            android:text="@string/button_sort_by_last_viewed"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
